@@ -1,0 +1,131 @@
+@media (min-width: 576px) and (max-width: 992px) {
+
+.header {
+    display: grid;
+    grid-area: header;
+    grid-template-columns: repeat(8, 1fr);
+    column-gap: 5px;
+    row-gap: 5px;
+    background-color: gray;
+    grid-template-areas:
+    "logo logo buttons buttons buttons buttons tools tools";
+
+        &-image {
+            grid-area: logo;
+            border-radius: 10px;
+            background-color: rgb(74, 95, 38);
+        }
+
+        &-buttons {
+            grid-area: buttons;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(74, 95, 38);
+            border-radius: 10px;
+        
+            a {
+                margin: 20px 10px;
+                border: 1px solid;
+                border-color: gray;
+                border-radius: 10px;
+                padding: 5px;
+                background-color: gray;
+                transition: background-color 0.3s ease-in;
+            }     
+            a:hover {
+                background-color: rgba(128, 128, 128, 0.486);
+                border-color: rgba(128, 128, 128, 0.486);
+            }
+        }
+
+        &-tools {
+            grid-area: tools;
+            background-color: rgb(74, 95, 38);
+            border-radius: 10px;
+        }
+}
+
+
+    .body {
+        display: grid;
+        grid-area: body;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-areas:
+        "herofeature herofeature herofeature herofeature herofeature herofeature herofeature herofeature"
+        "toaction toaction toaction toaction toaction toaction toaction toaction"
+        "feature feature feature feature feature feature AD AD"
+        "listing listing listing listing listing listing listing listing"
+        "sidebar sidebar sidebar sidebar sidebar sidebar sidebar sidebar";
+        // background-color: gray;
+        // column-gap: 5px;
+        // row-gap: 5px;
+        // border-radius: 10px;
+        // height: 500px;
+
+        &-herofeature {
+            // display: grid;
+            grid-area: herofeature;
+            // border-radius: 10px;
+            // background-color: rgb(74, 95, 38);
+        }
+
+        &-toaction {
+            // display: grid;
+            grid-area: toaction;
+            // border-radius: 10px;
+            // background-color: rgb(74, 95, 38);
+        }
+
+        &-AD {
+            // display: grid;
+            grid-area: AD;
+            // border-radius: 10px;
+            // background-color: rgb(74, 95, 38);
+        }
+
+        &-feature {
+            // display: grid;
+            grid-area: feature;
+            // border-radius: 10px;
+            // background-color: rgb(74, 95, 38);          
+        }
+
+        &-listing {
+            // display: grid;
+            grid-area: listing;
+            // border-radius: 10px;
+            // background-color: rgb(74, 95, 38);
+        }
+
+        &-sidebar {
+            // display: grid;
+            grid-area: sidebar;
+            // border-radius: 10px;
+            // background-color: rgb(74, 95, 38);
+        }
+    }
+}
+
+.footer {
+    display: grid;
+    grid-area: footer;
+    grid-template-columns: repeat(8, 1fr);
+    // height: 40px;
+    background-color: gray;
+    column-gap: 5px;
+    row-gap: 5px;
+    grid-template-areas:
+    "footer footer footer footer footer footer footer footer";
+
+        &-item {
+            display: grid;
+            grid-area: footer;
+            // grid-template-columns: auto;
+            border-radius: 10px;
+            background-color: rgb(74, 95, 38);
+            
+            // align-items: center;
+            // justify-content: center;
+        }
+}

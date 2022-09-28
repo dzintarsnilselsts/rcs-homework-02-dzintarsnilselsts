@@ -1,0 +1,306 @@
+html, body, ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+.header {
+  display: grid;
+  grid-area: header;
+  grid-template-columns: repeat(12, 1fr);
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+  row-gap: 5px;
+  background-color: gray;
+  grid-template-areas: "logo logo buttons buttons buttons buttons buttons buttons buttons tools tools tools";
+}
+.header-image {
+  grid-area: logo;
+  border-radius: 10px;
+  background-color: rgb(74, 95, 38);
+}
+.header-buttons {
+  grid-area: buttons;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(74, 95, 38);
+  border-radius: 10px;
+}
+.header-buttons a {
+  margin: 20px 10px;
+  border: 1px solid;
+  border-color: gray;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: gray;
+  transition: background-color 0.3s ease-in;
+}
+.header-buttons a:hover {
+  background-color: rgba(128, 128, 128, 0.486);
+  border-color: rgba(128, 128, 128, 0.486);
+}
+.header-tools {
+  grid-area: tools;
+  background-color: rgb(74, 95, 38);
+  border-radius: 10px;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+  row-gap: 5px;
+  background-color: gray;
+  grid-template-areas: "header header header header header header header header header header header header" "body body body body body body body body body body body body" "footer footer footer footer footer footer footer footer footer footer footer footer";
+}
+
+.body {
+  display: grid;
+  grid-area: body;
+  grid-template-columns: 3fr 6fr 3fr;
+  grid-template-rows: 1fr 4fr;
+  grid-template-areas: "herofeature toaction AD" "feature listing sidebar";
+  background-color: gray;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+  row-gap: 5px;
+  border-radius: 10px;
+  height: 500px;
+}
+.body-herofeature {
+  display: grid;
+  grid-area: herofeature;
+  border-radius: 10px;
+  background-color: rgb(74, 95, 38);
+}
+.body-toaction {
+  display: grid;
+  grid-area: toaction;
+  border-radius: 10px;
+  background-color: rgb(74, 95, 38);
+}
+.body-AD {
+  display: grid;
+  grid-area: AD;
+  border-radius: 10px;
+  background-color: rgb(74, 95, 38);
+}
+.body-feature {
+  display: grid;
+  grid-area: feature;
+  border-radius: 10px;
+  background-color: rgb(74, 95, 38);
+}
+.body-listing {
+  display: grid;
+  grid-area: listing;
+  border-radius: 10px;
+  background-color: rgb(74, 95, 38);
+}
+.body-sidebar {
+  display: grid;
+  grid-area: sidebar;
+  border-radius: 10px;
+  background-color: rgb(74, 95, 38);
+}
+
+.footer {
+  display: grid;
+  grid-area: footer;
+  grid-template-columns: repeat(12, 1fr);
+  background-color: gray;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+  row-gap: 5px;
+  grid-template-areas: "footer footer footer footer footer footer footer footer footer footer footer footer";
+}
+.footer-item {
+  display: grid;
+  grid-area: footer;
+  border-radius: 10px;
+  background-color: rgb(74, 95, 38);
+}
+
+@media (max-width: 576px) {
+  .header {
+    display: grid;
+    grid-area: header;
+    grid-template-columns: repeat(4, 1fr);
+    -moz-column-gap: 5px;
+         column-gap: 5px;
+    row-gap: 5px;
+    background-color: gray;
+    grid-template-areas: "logo logo logo logo" "buttons buttons tools tools";
+  }
+  .header-image {
+    grid-area: logo;
+    border-radius: 10px;
+    background-color: rgb(74, 95, 38);
+  }
+  .header-buttons {
+    grid-area: buttons;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(74, 95, 38);
+    border-radius: 10px;
+  }
+  .header-buttons a {
+    margin: 20px 10px;
+    border: 1px solid;
+    border-color: gray;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: gray;
+    transition: background-color 0.3s ease-in;
+  }
+  .header-buttons a:hover {
+    background-color: rgba(128, 128, 128, 0.486);
+    border-color: rgba(128, 128, 128, 0.486);
+  }
+  .header-tools {
+    grid-area: tools;
+    background-color: rgb(74, 95, 38);
+    border-radius: 10px;
+  }
+  .body {
+    display: grid;
+    grid-area: body;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "toaction toaction toaction toaction" "feature feature feature feature" "AD AD AD AD" "listing listing listing listing";
+  }
+  .body-herofeature {
+    display: none;
+    grid-area: herofeature;
+  }
+  .body-toaction {
+    grid-area: toaction;
+  }
+  .body-AD {
+    grid-area: AD;
+  }
+  .body-feature {
+    grid-area: feature;
+  }
+  .body-listing {
+    grid-area: listing;
+  }
+  .body-sidebar {
+    display: none;
+    grid-area: sidebar;
+  }
+  .footer {
+    display: grid;
+    grid-area: footer;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: gray;
+    -moz-column-gap: 5px;
+         column-gap: 5px;
+    row-gap: 5px;
+    grid-template-areas: "footer footer footer footer";
+  }
+  .footer-item {
+    display: grid;
+    grid-area: footer;
+    border-radius: 10px;
+    background-color: rgb(74, 95, 38);
+  }
+}
+@media (min-width: 576px) and (max-width: 992px) {
+  .header {
+    display: grid;
+    grid-area: header;
+    grid-template-columns: repeat(8, 1fr);
+    -moz-column-gap: 5px;
+         column-gap: 5px;
+    row-gap: 5px;
+    background-color: gray;
+    grid-template-areas: "logo logo buttons buttons buttons buttons tools tools";
+  }
+  .header-image {
+    grid-area: logo;
+    border-radius: 10px;
+    background-color: rgb(74, 95, 38);
+  }
+  .header-buttons {
+    grid-area: buttons;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(74, 95, 38);
+    border-radius: 10px;
+  }
+  .header-buttons a {
+    margin: 20px 10px;
+    border: 1px solid;
+    border-color: gray;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: gray;
+    transition: background-color 0.3s ease-in;
+  }
+  .header-buttons a:hover {
+    background-color: rgba(128, 128, 128, 0.486);
+    border-color: rgba(128, 128, 128, 0.486);
+  }
+  .header-tools {
+    grid-area: tools;
+    background-color: rgb(74, 95, 38);
+    border-radius: 10px;
+  }
+  .body {
+    display: grid;
+    grid-area: body;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-areas: "herofeature herofeature herofeature herofeature herofeature herofeature herofeature herofeature" "toaction toaction toaction toaction toaction toaction toaction toaction" "feature feature feature feature feature feature AD AD" "listing listing listing listing listing listing listing listing" "sidebar sidebar sidebar sidebar sidebar sidebar sidebar sidebar";
+  }
+  .body-herofeature {
+    grid-area: herofeature;
+  }
+  .body-toaction {
+    grid-area: toaction;
+  }
+  .body-AD {
+    grid-area: AD;
+  }
+  .body-feature {
+    grid-area: feature;
+  }
+  .body-listing {
+    grid-area: listing;
+  }
+  .body-sidebar {
+    grid-area: sidebar;
+  }
+}
+.footer {
+  display: grid;
+  grid-area: footer;
+  grid-template-columns: repeat(8, 1fr);
+  background-color: gray;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+  row-gap: 5px;
+  grid-template-areas: "footer footer footer footer footer footer footer footer";
+}
+.footer-item {
+  display: grid;
+  grid-area: footer;
+  border-radius: 10px;
+  background-color: rgb(74, 95, 38);
+}/*# sourceMappingURL=main.css.map */

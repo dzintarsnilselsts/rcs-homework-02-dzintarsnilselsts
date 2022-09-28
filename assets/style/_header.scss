@@ -1,0 +1,48 @@
+    .header {
+        display: grid;
+        grid-area: header;
+        grid-template-columns: repeat(12, 1fr);
+        column-gap: 5px;
+        row-gap: 5px;
+        background-color: gray;
+        grid-template-areas:
+        "logo logo buttons buttons buttons buttons buttons buttons buttons tools tools tools";
+        // "body body body body body body body body body body body body"
+        // "footer footer footer footer footer footer footer footer footer footer footer footer";
+
+            &-image {
+                grid-area: logo;
+                border-radius: 10px;
+                background-color: rgb(74, 95, 38);
+            }
+
+            &-buttons {
+                grid-area: buttons;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: rgb(74, 95, 38);
+                border-radius: 10px;
+            
+                a {
+                    margin: 20px 10px;
+                    border: 1px solid;
+                    border-color: gray;
+                    border-radius: 10px;
+                    padding: 5px;
+                    background-color: gray;
+                    transition: background-color 0.3s ease-in;
+                }     
+                a:hover {
+                    background-color: rgba(128, 128, 128, 0.486);
+                    border-color: rgba(128, 128, 128, 0.486);
+                }
+            }
+
+            &-tools {
+                grid-area: tools;
+                // grid-template-columns: 3fr;
+                background-color: rgb(74, 95, 38);
+                border-radius: 10px;
+            }
+    }
